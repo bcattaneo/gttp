@@ -8,7 +8,7 @@
         document.getElementById("submit").addEventListener("click", () => {
             const url = document.getElementById("search").value;
             if (url.match(regex)) {
-                window.location.replace(`?url=${url}`);
+                window.location.href = `?url=${url}`;
             }
         });
     });
@@ -16,7 +16,7 @@
 
 <div class="row is-center is-full-screen is-paddingless">
     <div class="col-5 is-center">
-        <input id="search" type="text" />
+        <input id="search" type="text" placeholder="Article's URL" />
         <input id="submit" type="submit" value="GTTP" />
     </div>
 </div>

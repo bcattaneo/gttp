@@ -1,0 +1,24 @@
+{% include "_header.html" %}
+
+<script>
+    const expr = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
+    const regex = new RegExp(expr);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("submit").addEventListener("click", () => {
+            const url = document.getElementById("search").value;
+            if (url.match(regex)) {
+                window.location.replace(`?url=${url}`);
+            }
+        });
+    });
+</script>
+
+<div class="row is-center is-full-screen is-paddingless">
+    <div class="col-5 is-center">
+        <input id="search" type="text" />
+        <input id="submit" type="submit" value="GTTP" />
+    </div>
+</div>
+
+{% include "_footer.html" %}

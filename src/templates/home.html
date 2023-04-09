@@ -1,0 +1,26 @@
+{% include "_header.html" %}
+
+<div style="position: absolute; top: 1em; left: 0.5em">
+    <a href="{{ url }}">
+        <img src="https://icongr.am/fontawesome/angle-left.svg?size=51&color=currentColor" />
+    </a>
+</div>
+
+<nav class="nav" style="margin-top: 1em">
+    <div class="nav-center">
+        <h2>{{ title }}</h2>
+    </div>
+</nav>
+
+<div style="padding: 1em">
+    <p>
+        <h3>Abstract</h3>
+    </p>
+    <p>{{ abstract }}</p>
+    <p>
+        <h3>Conclusion</h3>
+    </p>
+    <p>{{ conclusion }}</p>
+</div>
+
+{% include "_footer.html" %}

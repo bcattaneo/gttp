@@ -84,7 +84,7 @@ def main():
     response = get_response(prompt)
     message_log.append({"role": "user", "content": prompt})
     message_log.append({"role": "assistant", "content": response})
-    app.run(threaded=True, use_reloader=True)
+    app.run(host="0.0.0.0", threaded=True, use_reloader=True)
 
 
 if __name__ == "__main__":
